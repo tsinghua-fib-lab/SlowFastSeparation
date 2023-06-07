@@ -5,7 +5,7 @@
 # total_t=5.1
 # dt=0.01
 # baseline_epoch=50
-# seed_num=10
+# seed_num=3
 # tau_1=0.1
 # tau_s=0.8
 # device=cpu
@@ -23,7 +23,7 @@ trace_num=100
 total_t=15.1
 dt=0.01
 baseline_epoch=50
-seed_num=10
+seed_num=3
 tau_1=0.3
 tau_s=3.0
 device=cpu
@@ -49,4 +49,4 @@ CUDA_VISIBLE_DEVICES=$gpu_id python run.py \
 --data_dir $data_dir \
 --baseline_log_dir $baseline_log_dir \
 --result_dir $result_dir \
-# --parallel
+--parallel

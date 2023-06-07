@@ -8,7 +8,7 @@ else:
 
 class NeuralODEfunc(nn.Module):
 
-    def __init__(self, obs_dim, nhidden=64):
+    def __init__(self, obs_dim, nhidden):
         super(NeuralODEfunc, self).__init__()
         self.tanh = nn.Tanh()
         self.fc1 = nn.Linear(obs_dim, nhidden)
@@ -25,7 +25,7 @@ class NeuralODEfunc(nn.Module):
 
 class NeuralODE(nn.Module):
 
-    def __init__(self, in_channels, feature_dim, nhidden=64):
+    def __init__(self, in_channels, feature_dim, nhidden=20):
         super(NeuralODE, self).__init__()
 
         self.ode = NeuralODEfunc(in_channels*feature_dim, nhidden)

@@ -192,9 +192,9 @@ def plot_evolve(length):
     ode = open(f'Results/2S2F/neural_ode_evolve_test_{length}.txt', 'r')
     
     our_data = [[] for seed in range(10)]
-    lstm_data = [[] for seed in range(10)]
-    tcn_data = [[] for seed in range(10)]
-    ode_data = [[] for seed in range(10)]
+    lstm_data = [[] for seed in range(3)]
+    tcn_data = [[] for seed in range(3)]
+    ode_data = [[] for seed in range(3)]
     for i, data in enumerate([our, lstm, tcn, ode]):
         for line in data.readlines():
             tau = float(line.split(',')[0])
